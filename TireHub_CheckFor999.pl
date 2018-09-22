@@ -45,7 +45,7 @@ foreach(readdir(SDIR)) {
 						print("${line}");
 						print("Sending NSCA...\n");
 					}
-					$cmd="\"C:/Program Files/PS/PSUtil/bin/NSClientSender.bat\" -m \"Error: 999 in file ${fqf}\" -c 1";
+					$cmd="\"C:/Program Files/PS/PSUtil/bin/NSClientSender.bat\" -m \"SISM Warning: SQL 999 error in file ${fqf} - Please restart SISM's on TireSISM server\" -c 1";
 					@lines = qx($cmd);
 					foreach $line (@lines) {
 						print("$line");
